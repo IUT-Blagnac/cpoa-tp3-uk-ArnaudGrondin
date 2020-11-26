@@ -1,6 +1,18 @@
+package pizzeria;
 
-public class SimpleFabriquePizza {
+public class PizzeriaFactory {
+	static PizzeriaFactory uniqueInstance = new PizzeriaFactory();
+	
+	private PizzeriaFactory() {
+		
+	}
+	 static PizzeriaFactory getInstance() {
+		
+		return uniqueInstance;
 
+	}
+	
+	/*
 	public Pizza creerPizza(String pfType) {
 		Pizza pizza;
 		switch (pfType) {
@@ -19,4 +31,5 @@ public class SimpleFabriquePizza {
 		}
 		return null;
 	}
+	*/
 }

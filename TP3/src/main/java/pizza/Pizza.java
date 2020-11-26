@@ -1,8 +1,12 @@
+package pizza;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author bruel (from O'Reilly Head-First series)
  */
 public abstract class Pizza {
-
+	public List garnitures = new ArrayList<String>();
 	public void preparer() {
 		// TODO Auto-generated method stub
 		

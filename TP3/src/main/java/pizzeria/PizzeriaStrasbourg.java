@@ -10,8 +10,10 @@ public class PizzeriaStrasbourg extends Pizzeria {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
 	@Override
-	Pizza creerPizza(String type) {
+	Pizza createPizza(String type) {
 		// TODO Auto-generated method stub
 		return null;
 	}

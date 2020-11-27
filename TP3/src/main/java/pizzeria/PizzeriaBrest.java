@@ -20,9 +20,11 @@ public class PizzeriaBrest extends Pizzeria {
 		// TODO Auto-generated method stub
 				switch (type) {
 				case "fromage":
-					return new PizzaCheeseStyleBrest();
+					 PizzaCheeseStyleBrest p = new PizzaCheeseStyleBrest();
+					 p.preparer();
 				case "poivron":
-					return new PizzaPoivronStyleBrest();
+					PizzaPoivronStyleBrest p1 = new PizzaPoivronStyleBrest();
+					p1.preparer();
 				case "grecque":
 					return new PizzaGrecqueStyleBrest();	 
 				default:

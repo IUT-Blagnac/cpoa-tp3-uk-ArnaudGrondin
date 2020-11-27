@@ -9,7 +9,7 @@ import pizzaFactory.PizzaFactory;
  * @depend - * - Pizza
  */
 public  abstract class Pizzeria  {
-
+	PizzaFactory PizzaFactory ;
 	/**
 	 * @param type
 	 * @return a Pizza object according to the type
@@ -20,7 +20,7 @@ public  abstract class Pizzeria  {
 	}
 
 	public Pizza orderPizza(String type) {
-
+		Pizza instance = PizzaFactory.creerPizza(string);
 	
 		/*
 		pizza.preparer();
@@ -28,9 +28,12 @@ public  abstract class Pizzeria  {
 		pizza.couper();
 		pizza.emballer();
 		*/
-		return pizza;
+		return null
+				;
 	}
 
-	abstract  Pizza createPizza(String type);
+	abstract  Pizza createPizza(String type) {
+		
+	};
 
-}
+}	

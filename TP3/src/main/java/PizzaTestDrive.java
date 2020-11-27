@@ -1,15 +1,17 @@
 import pizza.Pizza;
 import pizzaFactory.PizzaFactory;
+import pizzaFactory.PizzaFactoryBrest;
+import pizzaFactory.PizzaFactoryStrasbourg;
 import pizzeria.Pizzeria;
 import pizzeria.PizzeriaBrest;
 import pizzeria.PizzeriaFactory;
-import pizzaFactory;
+import pizzeria.PizzeriaStrasbourg;
+
 public class PizzaTestDrive {
 
 	public static void main(String[] args) {
-		PizzaFactory shopFromBrest = PizzeriaBrest.getInstance();
-		PizzaFactory shopFromStrasbourg =  PizzeriaFactory.getInstance("Strasbourg");
-
+		Pizzeria shopFromBrest = new PizzeriaBrest(PizzaFactoryBrest.getInstance());
+		Pizzeria shopFromStrasbourg =  new PizzeriaStrasbourg(PizzaFactoryStrasbourg.getInstance());
         Pizza pizza = shopFromBrest.orderPizza("cheese");
         System.out.println("JMB has ordered a " + pizza.getName() + "\n");
 

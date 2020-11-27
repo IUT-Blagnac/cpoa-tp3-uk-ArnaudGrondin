@@ -15,25 +15,20 @@ public  abstract class Pizzeria  {
 	 * @return a Pizza object according to the type
 	 */
 
-	public Pizzeria(PizzaFactory pizzafcatory) {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 	public Pizza orderPizza(String type) {
-		Pizza instance = PizzaFactory.creerPizza(string);
+		Pizza instance = PizzaFactory.createPizza(type);
 	
-		/*
-		pizza.preparer();
-		pizza.cuire();
-		pizza.couper();
-		pizza.emballer();
-		*/
-		return null
-				;
+		
+		instance.preparer();
+		instance.bake();
+		instance.cut();
+		instance.pack();
+		 return instance ;
+				
 	}
 
-	abstract  Pizza createPizza(String type) {
-		
-	};
+	
 
 }	

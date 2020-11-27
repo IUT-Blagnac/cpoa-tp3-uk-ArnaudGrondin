@@ -1,3 +1,5 @@
+package java;
+
 import pizza.Pizza;
 import pizzaFactory.PizzaFactory;
 import pizzaFactory.PizzaFactoryBrest;
@@ -10,8 +12,8 @@ import pizzeria.PizzeriaStrasbourg;
 public class PizzaTestDrive {
 
 	public static void main(String[] args) {
-		Pizzeria shopFromBrest = new PizzeriaBrest(PizzaFactoryBrest.getInstance());
-		Pizzeria shopFromStrasbourg =  new PizzeriaStrasbourg(PizzaFactoryStrasbourg.getInstance());
+		Pizzeria shopFromBrest = new PizzeriaFactory().create("Brest");
+        Pizzeria shopFromStrasbourg = new PizzeriaFactory().create("Strasbourg");
         Pizza pizza = shopFromBrest.orderPizza("cheese");
         System.out.println("JMB has ordered a " + pizza.getName() + "\n");
 
